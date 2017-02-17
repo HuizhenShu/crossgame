@@ -123,14 +123,16 @@ var Engine = (function(global) {
             }
             
             if (Player.life < 1 ) {
-                //console.log(Player.life);
-                var screen = document.getElementsByClassName('screen');
+                var information = document.getElementById('information');
+                var overpage = document.getElementById('overpage');
                 //console.log(screen[0])
-                screen[0].className = "screen active" ;
+                information.style.display = "block" ;
+                overpage.style.display = "block" ;
                 var button = document.getElementsByTagName('button');
                 button[0].onclick = function(){
                     reset();
-                    screen[0].className = 'screen';
+                    information.style.display = "none" ;
+                    overpage.style.display = "none" ;
                 }
                 
             };
