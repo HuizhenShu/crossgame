@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+}
+
+canvas {
+	position: absolute;
+	top: 5%;
+	left: 30%;
+
+}
+.screen {
+	position: relative;
+	display: none;
+	background-color: white;
+	height: 700px;
+	width: 1000px;
+	opacity: 0.4;
+	z-index: -1;
+}
+.active {
+	display: block;
+	z-index: 3;
+}
+
+.screen .information {
+	position: absolute;
+	opacity: 1;
+	top: 200px;
+	left: 600px;
+	height: 200px;
+	width: 200px;
+	background-color: #333;
+}
