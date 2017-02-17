@@ -123,9 +123,11 @@ var Engine = (function(global) {
             }
             
             if (Player.life < 1 ) {
+                var score = document.getElementById('score');
                 var information = document.getElementById('information');
                 var overpage = document.getElementById('overpage');
                 //console.log(screen[0])
+                score.innerText = Player.rate;
                 information.style.display = "block" ;
                 overpage.style.display = "block" ;
                 var button = document.getElementsByTagName('button');
