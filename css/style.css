@@ -8,26 +8,46 @@ canvas {
 	left: 30%;
 
 }
-.screen {
-	position: relative;
-	display: none;
-	background-color: white;
-	height: 700px;
-	width: 1000px;
-	opacity: 0.4;
-	z-index: -1;
-}
+
 .active {
 	display: block;
 	z-index: 3;
 }
 
-.screen .information {
-	position: absolute;
-	opacity: 1;
-	top: 200px;
-	left: 600px;
-	height: 200px;
-	width: 200px;
-	background-color: #333;
+#information {
+	background:#fff;  
+    z-index: 120;  
+    width: 400px;  
+    height: 300px;  
+    left: 43%; /*FF IE7*/  
+    top: 37%; /*FF IE7*/  
+    margin-left: -150px !important; /*FF IE7 该值为本身宽的一半 */  
+    margin-top: -60px !important; /*FF IE7 该值为本身高的一半*/  
+    margin-top: 0px;  
+    position: fixed !important; /*FF IE7*/  
+    position: absolute; /*IE6*/  
+    _top: expression(eval(document.compatMode &&   
+     document.compatMode == 'CSS1Compat')?   
+    documentElement.scrollTop+  (document.documentElement.clientHeight-this.offsetHeight  
+        )/2: /*IE6*/   
+    document.body.scrollTop+  (document.body.clientHeight-  this.clientHeight  
+        )/2 ); /*IE5 IE5.5*/  
+}
+#overpage {
+	background-color:#000;  
+    width: 100%;  
+    height: 100%;  
+    left: 0;  
+    top: 0; /*FF IE7*/  
+    filter: alpha(opacity = 65); /*IE*/  
+    opacity: 0.65; /*FF*/  
+    z-index: 110;  
+    position: fixed !important; /*FF IE7*/  
+    position: absolute; /*IE6*/  
+    _top: expression(eval(document.compatMode &&   
+     document.compatMode == 'CSS1Compat')?   
+    documentElement.scrollTop+  (document.documentElement.clientHeight-this.offsetHeight  
+        )/2: /*IE6*/   
+    document.body.scrollTop+  (document.body.clientHeight-  this.clientHeight  
+        )/2 ); /*IE5 IE5.5*/  
 }
